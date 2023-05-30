@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:#9bf1ff">
+
+    <a-camera wasd-controls-enabled="false" position="0 8 20"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets>      
+
+    <a-asset-item id = 'train-obj' src = 'tinker.obj'></a-asset-item>
+    <a-asset-item id = 'train-mtl' src = 'obj.mtl'></a-asset-item>
+    </a-assets>
+    
+    
+    
+    <!-------------------------------------Circular Plane----------------------------------------------->
+    
+    <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+      color="#fcd1a9">
+    </a-circle>
+    
+  
+
+    <a-entity obj-model="obj:#train-obj; mtl:#train-mtl" position="5 0 0" rotation="-90 -40 0" scale="0.2 0.2 0.2">
+
+    </a-entity>
+    
+  </a-scene>
+</body>
+
+</html>
